@@ -5,7 +5,16 @@ import UserDetail from './UserDetail';
 import { IoIosPhonePortrait } from "react-icons/io";
 import { VscMail } from "react-icons/vsc";
 
-const UserList: React.FC = () => {
+export interface User {
+    name: string;
+    phone: string;
+    email: string;
+    hire_date: string;
+    position_name: string;
+    department: string;
+}
+
+const UserList: React.FC <User> = () => {
     const [users, setUsers] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedUser, setSelectedUser] = useState(null);

@@ -1,6 +1,12 @@
 import React from 'react';
+import { User } from './UserList';
 
-const UserDetail: React.FC = ({ user, onClose }) => {
+interface UserDetailProps {
+    user: User;
+    onClose: () => void;
+}
+
+const UserDetail: React.FC <UserDetailProps> = ({ user, onClose }) => {
     return (
         <div onClick={onClose} className="modal">
             <div className="modal-content user-list-item">
